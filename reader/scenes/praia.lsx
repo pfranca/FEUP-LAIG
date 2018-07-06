@@ -1,0 +1,1247 @@
+<SCENE>
+
+<!-- Initial values -->
+<INITIALS>
+    <frustum near="0.1" far="500"/>
+    <translation x="-1" y="1" z="0" />
+    <rotation axis="x" angle="0" />
+    <rotation axis="y" angle="0" />
+    <rotation axis="z" angle="0" />
+    <scale sx="0.25" sy="0.25" sz="0.25" />
+    <reference length="5" />
+</INITIALS>
+
+
+<!-- Illumination and clear colour -->
+<ILLUMINATION>
+    <ambient r="0.2" g="0.2" b="0.2" a="1" />
+    <doubleside value="1"/>
+    <background r="0.2" g="0.8" b="1" a="1" />
+</ILLUMINATION>
+
+
+<!-- Lights -->
+<LIGHTS>
+	<LIGHT id="light0">
+        <enable value ="1" />
+        <position  x="0" y="20" z="0" w="1" />
+        <ambient r="0.2" g="0.2" b="0.2" a="1.0" />
+        <diffuse r="1.0" g="1.0" b="1.0" a="1.0" />
+        <specular r="1.0" g="1.0" b="1.0" a="1.0" />
+    </LIGHT>
+
+	<LIGHT id="light1">
+        <enable value ="1" />
+        <position x="30" y="20" z="0" w="1" />
+        <ambient r="0.2" g="0.2" b="0.2" a="1.0" />
+        <diffuse r="1.0" g="1.0" b="1.0" a="1.0" />
+        <specular r="1.0" g="1.0" b="1.0" a="1.0" />
+    </LIGHT>
+
+	<LIGHT id="light2">
+        <enable value ="1" />
+        <position x="0" y="20" z="20" w="1" />
+        <ambient r="0.2" g="0.2" b="0.2" a="1.0" />
+        <diffuse r="1.0" g="1.0" b="1.0" a="1.0" />
+        <specular r="1.0" g="1.0" b="1.0" a="1.0" />
+    </LIGHT>
+
+    <LIGHT id="light3">
+        <enable value ="1" />
+        <position x="30" y="10" z="20" w="1" />
+        <ambient r="0.2" g="0.2" b="0.2" a="1.0" />
+        <diffuse r="0.6" g="0.6" b="0.6" a="1.0" />
+        <specular r="0.6" g="0.6" b="0.6" a="1.0" />
+    </LIGHT>
+
+    <LIGHT id="Sol">
+        <enable value ="1" />
+        <position  x="25" y="10" z="15" w="1" />
+        <ambient r="0.2" g="0.2" b="0.2" a="1.0" />
+        <diffuse r="1.0" g="1.0" b="1.0" a="1.0" />
+        <specular r="1.0" g="1.0" b="1.0" a="1.0" />
+    </LIGHT>
+
+</LIGHTS>
+
+<!-- Textures -->
+<TEXTURES>
+
+    <!-- Areia -->
+    <TEXTURE id="areia">
+        <file path="images/sand.jpg" />
+        <amplif_factor s="20" t="20" />
+    </TEXTURE>
+
+     <!-- Mar1 -->
+    <TEXTURE id="mar">
+        <file path="images/sea.jpg" />
+        <amplif_factor s="80" t="20" />
+    </TEXTURE>
+
+     <!-- Mar2 -->
+    <TEXTURE id="mar1">
+        <file path="images/sea1.jpg" />
+        <amplif_factor s="80" t="20" />
+    </TEXTURE>
+
+        <!-- Bola -->
+    <TEXTURE id="bola">
+        <file path="images/ball.jpg" />
+        <amplif_factor s="0.2" t="0.2" />
+    </TEXTURE>
+
+     <!-- Toalha -->
+    <TEXTURE id="toalha">
+        <file path="images/toalha.jpg" />
+        <amplif_factor s="6" t="3" />
+    </TEXTURE>
+
+
+     <!-- Rede -->
+    <TEXTURE id="net">
+        <file path="images/net.jpg" />
+        <amplif_factor s="2" t="9" />
+    </TEXTURE>
+
+       <!-- Linha -->
+    <TEXTURE id="linha">
+        <file path="images/linha.jpg" />
+        <amplif_factor s="1" t="1" />
+    </TEXTURE>
+
+
+    <!-- Fita das linhas -->
+    <TEXTURE id="fita">
+        <file path="images/fita.jpg" />
+        <amplif_factor s="5" t="50" />
+    </TEXTURE>
+
+    <!-- guardasol -->
+    <TEXTURE id="guardasol">
+        <file path="images/guardasol.jpg" />
+        <amplif_factor s="15" t="40" />
+    </TEXTURE>
+
+    <!-- bandeira -->
+    <TEXTURE id="bandeira">
+        <file path="images/pirataria.jpg" />
+        <amplif_factor s="1" t="1" />
+    </TEXTURE>
+
+    <TEXTURE id="pinkkite">
+        <file path="images/pinkkite.jpg" />
+        <amplif_factor s="1" t="1" />
+    </TEXTURE>
+
+    <!-- TexturePiece1 -->
+    <TEXTURE id="piece1">
+        <file path="images/LightPiece.jpg" />
+        <amplif_factor s="20" t="20" />
+    </TEXTURE>
+
+     <!-- TexturePiece2 -->
+    <TEXTURE id="piece2">
+        <file path="images/DarkPiece.jpg" />
+        <amplif_factor s="20" t="20" />
+    </TEXTURE>
+
+     <!-- TextureBoard1 -->
+    <TEXTURE id="board1">
+        <file path="images/WhiteTile.jpg" />
+        <amplif_factor s="20" t="20" />
+    </TEXTURE>
+
+     <!-- TextureBoard2 -->
+    <TEXTURE id="board2">
+        <file path="images/BlackTile.jpg" />
+        <amplif_factor s="20" t="20" />
+    </TEXTURE>
+
+     <!-- TextureSelectedBoard -->
+    <TEXTURE id="selectedboard">
+        <file path="images/SelectableTile.jpg" />
+        <amplif_factor s="20" t="20" />
+    </TEXTURE>
+
+</TEXTURES>
+
+
+
+
+    <MATERIALS>
+
+    <MATERIAL id="blackPiece">
+        <shininess value="1" />
+        <specular r="0.2" g="0.2" b="0.2" a="1" />
+        <diffuse r="0.0" g="0" b="0.0" a="1" />
+        <ambient r="0.1" g="0.1" b="0.1" a="1" />
+        <emission r="0.0" g="0.0" b="0.0" a="1" />
+    </MATERIAL>
+
+    <MATERIAL id="whitePiece">
+        <shininess value="1" />
+        <specular r="0.2" g="0.2" b="0.2" a="1" />
+        <diffuse r="0.6" g="0.6" b="0.6" a="1" />
+        <ambient r="0.1" g="0.1" b="0.1" a="1" />
+        <emission r="0.0" g="0.0" b="0.0" a="1" />
+    </MATERIAL>
+
+
+     <!-- A default material -->
+    <MATERIAL id="defaultMaterial">
+        <shininess value="1" />
+        <specular r="0.0" g="0.0" b="0.0" a="1" />
+        <diffuse r="0.4" g="0.4" b="0.4" a="1" />
+        <ambient r="0.4" g="0.4" b="0.4" a="1" />
+        <emission r="0.0" g="0.0" b="0.0" a="1" />
+    </MATERIAL>
+
+	<!-- Pyramid material -->
+    <MATERIAL id="piramideMaterial">
+        <shininess value="1" />
+        <specular r="0" g="0" b="0" a="1" />
+        <diffuse r="1.0" g="0.68" b="0.4" a="1" />
+        <ambient r="0.2" g="0.2" b="0.2" a="1" />
+        <emission r="0.0" g="0.0" b="0.0" a="1" />
+    </MATERIAL>
+
+
+	<!-- Chao material -->
+	<MATERIAL id="chaoMaterial">
+        <shininess value="1" />
+        <specular r="0.0" g="0.0" b="0.0" a="1" />
+        <diffuse r="0.6" g="0.298" b="0.0" a="1" />
+        <ambient r="0.1" g="0.1" b="0.1" a="1" />
+        <emission r="0.0" g="0.0" b="0.0" a="1" />
+    </MATERIAL>
+
+    <!-- Postes material -->
+    <MATERIAL id="posteMaterial">
+        <shininess value="100" />
+        <specular r="0.0" g="0.0" b="0.0" a="1" />
+        <diffuse r="0.447" g="0.416" b="0.416" a="1" />
+        <ambient r="0.0" g="0.0" b="0.0" a="1" />
+        <emission r="0.0" g="0.0" b="0.0" a="1" />
+    </MATERIAL>
+
+    <!-- Mar material -->
+    <MATERIAL id="marMaterial">
+        <shininess value="100" />
+        <specular r="0.5" g="0.5" b="0.5" a="1" />
+        <diffuse r="0.5" g="0.5" b="0.5" a="1" />
+        <ambient r="0.0" g="0.0" b="0.0" a="1" />
+        <emission r="0.0" g="0.0" b="0.0" a="1" />
+    </MATERIAL>
+
+
+    <!-- Bandeira material -->
+    <MATERIAL id="bandeiraMaterial">
+        <shininess value="1" />
+        <specular r="0.2" g="0.2" b="0.2" a="1" />
+        <diffuse r="0.0" g="0.207" b="0.0" a="1" />
+        <ambient r="0.1" g="0.1" b="0.1" a="1" />
+        <emission r="0.0" g="0.0" b="0.0" a="1" />
+    </MATERIAL>
+
+
+</MATERIALS>
+
+<ANIMATIONS>
+
+
+  <ANIMATION id="bolaanda" speed="5" type="linear">
+      <controlpoint xx="0" yy="0" zz="0" />
+      <controlpoint xx="-3" yy="0" zz="5" />
+    </ANIMATION>
+
+
+  <ANIMATION id="bolavai" speed="10" type="bezier">
+    <controlpoint xx="0" yy="5" zz="0" />
+    <controlpoint xx="15" yy="20" zz="0" />
+    <controlpoint xx="15" yy="20" zz="0" />
+    <controlpoint xx="25" yy="0" zz="0" />
+  </ANIMATION>
+
+  <ANIMATION id="bolavem" speed="10" type="bezier">
+    <controlpoint xx="25" yy="0" zz="0" />
+    <controlpoint xx="15" yy="20" zz="0" />
+    <controlpoint xx="15" yy="20" zz="0" />
+    <controlpoint xx="0" yy="0" zz="0" />
+  </ANIMATION>
+
+  <ANIMATION id="jogada" type="combo">
+    <SPANREF id="bolavai"/>
+    <SPANREF id="bolavem"/>
+    <SPANREF id="bolaanda"/>
+
+  </ANIMATION>
+
+
+    <ANIMATION id="papagaiosobe" speed="5" type="linear">
+        <controlpoint xx="0" yy="0" zz="0" />
+        <controlpoint xx="0" yy="10" zz="0" />
+      </ANIMATION>
+
+      <ANIMATION id="papagaioroda" speed="-3" type="circular" centerx="-5" centery="10" centerz="0" radius="5" startang="0" rotang="-360"/>
+
+      <ANIMATION id="papagaiodesce" speed="5" type="linear">
+          <controlpoint xx="0" yy="10" zz="0" />
+          <controlpoint xx="0" yy="00" zz="0" />
+        </ANIMATION>
+
+    <ANIMATION id="papagaiomexe" type="combo">
+      <SPANREF id="papagaiosobe"/>
+      <SPANREF id="papagaioroda"/>
+      <SPANREF id="papagaiodesce"/>
+    </ANIMATION>
+
+
+
+
+
+</ANIMATIONS>
+
+
+<!-- The leaves -->
+<LEAVES>
+</LEAVES>
+
+
+<!-- The nodes -->
+<NODES>
+
+    <ROOT id="root" />
+
+    <!-- The root node -->
+    <NODE id="root">
+
+        <MATERIAL id="defaultMaterial" />
+        <TEXTURE id="null" />
+
+        <DESCENDANTS>
+
+            <NODEREF id="chao" />
+            <NODEREF id="mar" />
+            <NODEREF id="mar1" />
+            <NODEREF id="bola" />
+            <NODEREF id="guardasoltoalha" />
+            <NODEREF id="campo" />
+            <NODEREF id="flagposte" />
+            <NODEREF id="papagaio" />
+            <NODEREF id="table" />
+          <!--  <NODEREF id="teste" />-->
+
+        </DESCENDANTS>
+
+    </NODE>
+
+
+
+     <!-- Chão -->
+     <NODE id="chao">
+        <MATERIAL id="chaoMaterial" />
+        <TEXTURE id="areia" />
+
+
+        <TRANSLATION x="0" y="0" z="80" />
+        <ROTATION axis="x" angle="-90" />
+
+
+
+        <DESCENDANTS>
+            <LEAF  type="rectangle" args="0 80 80 0" />
+        </DESCENDANTS>
+
+    </NODE>
+
+    <!-- Parede 1 -->
+    <NODE id="mar">
+        <MATERIAL id="marMaterial" />
+        <TEXTURE id="mar" />
+
+        <DESCENDANTS>
+            <LEAF  type="rectangle" args="0 20 80 0" />
+        </DESCENDANTS>
+
+    </NODE>
+
+
+     <!-- Parede 2 -->
+     <NODE id="mar1">
+        <MATERIAL id="marMaterial" />
+        <TEXTURE id="mar1" />
+
+
+        <TRANSLATION x="0" y="0" z="80" />
+        <ROTATION axis="y" angle="90" />
+
+        <DESCENDANTS>
+            <LEAF  type="rectangle" args="0 20 80 0" />
+        </DESCENDANTS>
+
+    </NODE>
+
+
+
+    <!-- Bola -->
+    <NODE id="bola" >
+        <MATERIAL id="defaultMaterial" />
+        <TEXTURE id="bola" />
+
+
+        <TRANSLATION x="5" y="0.2" z="5" />
+        <SCALE sx="0.5" sy="0.5" sz="0.5" />
+
+        <ANIMATIONREFS>
+          <ANIMATIONREF id="jogada" />
+        </ANIMATIONREFS>
+
+        <DESCENDANTS>
+                        <LEAF id="sphere1" type="sphere" args="0.5 20 20" />
+
+        </DESCENDANTS>
+
+    </NODE>
+
+
+      <!-- Guarda sol com toalha -->
+    <NODE id="guardasoltoalha" selectable="true">
+        <MATERIAL id="defaultMaterial" />
+        <TEXTURE id="null" />
+
+
+        <TRANSLATION x="15" y="0" z="25" />
+
+        <DESCENDANTS>
+            <NODEREF id="guardasol" />
+            <NODEREF id="toalha" />
+        </DESCENDANTS>
+
+
+    </NODE>
+
+        <!-- Toalha -->
+    <NODE id="toalha">
+        <MATERIAL id="null" />
+        <TEXTURE id="toalha" />
+
+        <TRANSLATION x="2" y="0.5" z="0" />
+        <ROTATION axis="y" angle="35" />
+        <ROTATION axis="x" angle="-90" />
+
+        <DESCENDANTS>
+            <LEAF  type="rectangle" args="0 3 6 0" />
+        </DESCENDANTS>
+
+    </NODE>
+
+
+         <!-- Guarda Sol -->
+     <NODE id="guardasol">
+        <MATERIAL id="null" />
+        <TEXTURE id="null" />
+
+        <DESCENDANTS>
+            <NODEREF id="cabo" />
+            <NODEREF id="shade" />
+        </DESCENDANTS>
+
+    </NODE>
+
+      <!-- Cabo do guarda sol -->
+    <NODE id="cabo">
+        <MATERIAL id="posteMaterial" />
+        <TEXTURE id="null" />
+
+
+       <SCALE sx="0.5" sy="1" sz="0.5" />
+       <ROTATION axis="x" angle="-90" />
+
+        <DESCENDANTS>
+                    <LEAF id="cylinder2" type="cylinder" args="5 0.3 0.3 20 20" />
+        </DESCENDANTS>
+
+    </NODE>
+
+
+    <!-- Shade -->
+    <NODE id="shade">
+      <MATERIAL id="null" />
+      <TEXTURE id="guardasol" />
+
+      <TRANSLATION x="0" y="5.55" z="0" />
+      <ROTATION axis="x" angle="90" />
+
+      <DESCENDANTS>
+        <NODEREF id="shade_down" />
+        <NODEREF id="shade_up" />
+      </DESCENDANTS>
+
+    </NODE>
+
+      <!-- Shade superior -->
+    <NODE id="shade_up">
+      <MATERIAL id="null" />
+      <TEXTURE id="null" />
+
+      <DESCENDANTS>
+        <LEAF id="cylinder_shade" type="cylinder" args="1 0 3 80 40 0 0" />
+      </DESCENDANTS>
+
+    </NODE>
+
+
+     <!-- Shade Inferior-->
+    <NODE id="shade_down">
+      <MATERIAL id="null" />
+      <TEXTURE id="null" />
+
+
+      <ROTATION axis="y" angle="180" />
+
+      <DESCENDANTS>
+        <LEAF id="cylinder_shade" type="cylinder" args="-1 0 3 20 40 0 0" />
+      </DESCENDANTS>
+
+    </NODE>
+
+
+    <!-- Campo -->
+    <NODE id="campo" selectable="true">
+
+        <MATERIAL id="defaultMaterial" />
+        <TEXTURE id="null" />
+
+
+      <TRANSLATION x="2.5" y="0" z="2.5" />
+
+
+        <DESCENDANTS>
+            <NODEREF id="piramide"  />
+            <NODEREF id="posterede" />
+            <NODEREF id="linhas" />
+
+        </DESCENDANTS>
+
+    </NODE>
+
+
+    <!-- Piramide -->
+    <NODE id="piramide">
+
+        <MATERIAL id="piramideMaterial" />
+        <TEXTURE id="fita" />
+
+
+        <SCALE sx="0.3" sy="0.3" sz="0.3" />
+
+
+        <DESCENDANTS>
+            <NODEREF id="piramide1" />
+            <NODEREF id="piramide2" />
+            <NODEREF id="piramide3" />
+            <NODEREF id="piramide4" />
+        </DESCENDANTS>
+
+    </NODE>
+
+
+    <NODE id="piramide1">
+
+        <MATERIAL id="null" />
+        <TEXTURE id="null" />
+
+
+        <TRANSLATION x="0" y="2" z="0" />
+
+
+        <DESCENDANTS>
+            <NODEREF id="meiaPiramide1" />
+            <NODEREF id="meiaPiramide2" />
+            <NODEREF id="basePiramide" />
+        </DESCENDANTS>
+
+    </NODE>
+
+
+
+    <NODE id="piramide2">
+
+        <MATERIAL id="null" />
+        <TEXTURE id="null" />
+
+        <TRANSLATION x="60" y="2" z="0" />
+
+
+        <DESCENDANTS>
+            <NODEREF id="meiaPiramide1" />
+            <NODEREF id="meiaPiramide2" />
+            <NODEREF id="basePiramide" />
+        </DESCENDANTS>
+
+    </NODE>
+
+    <NODE id="piramide3">
+
+        <MATERIAL id="null" />
+        <TEXTURE id="null" />
+
+        <TRANSLATION x="0" y="2" z="30" />
+
+
+        <DESCENDANTS>
+            <NODEREF id="meiaPiramide1" />
+            <NODEREF id="meiaPiramide2" />
+            <NODEREF id="basePiramide" />
+        </DESCENDANTS>
+
+    </NODE>
+
+    <NODE id="piramide4">
+
+        <MATERIAL id="null" />
+        <TEXTURE id="null" />
+
+       <TRANSLATION x="60" y="2" z="30" />
+
+        <DESCENDANTS>
+            <NODEREF id="meiaPiramide1" />
+            <NODEREF id="meiaPiramide2" />
+            <NODEREF id="basePiramide" />
+        </DESCENDANTS>
+
+    </NODE>
+
+    <!-- Base da piramide -->
+    <NODE id="basePiramide">
+        <MATERIAL id="null" />
+        <TEXTURE id="null" />
+
+       	<ROTATION axis="x" angle="90" />
+       	<TRANSLATION x="-0.71" y="-0.71" z="2" />
+
+
+        <DESCENDANTS>
+					<LEAF  type="rectangle" args="0 1.415 1.415 0" />
+        </DESCENDANTS>
+
+    </NODE>
+
+    <!-- Meia piramide -->
+    <NODE id="meiaPiramide1">
+        <MATERIAL id="null" />
+        <TEXTURE id="null" />
+
+        <DESCENDANTS>
+            <NODEREF id="meiaPiramide" />
+        </DESCENDANTS>
+
+    </NODE>
+
+    <!-- A outra metade -->
+    <NODE id="meiaPiramide2">
+        <MATERIAL id="null" />
+        <TEXTURE id="null" />
+
+
+		<ROTATION axis="y" angle="180" />
+
+        <DESCENDANTS>
+            <NODEREF id="meiaPiramide" />
+        </DESCENDANTS>
+
+    </NODE>
+
+    <!-- Meia piramide genérica -->
+    <NODE id="meiaPiramide">
+        <MATERIAL id="null" />
+        <TEXTURE id="null" />
+
+        <DESCENDANTS>
+            <NODEREF id="facePiramide1" />
+            <NODEREF id="facePiramide2" />
+        </DESCENDANTS>
+
+    </NODE>
+
+    <!-- Face da piramide-->
+   <NODE id="facePiramide1">
+        <MATERIAL id="null" />
+        <TEXTURE id="null" />
+
+
+		<ROTATION axis="x" angle="70.55" />
+       	<ROTATION axis="y" angle="-45" />
+
+        <DESCENDANTS>
+					<LEAF id="triangle1" type="triangle" args="1 0 2 2 0 1 0 0 0" />
+        </DESCENDANTS>
+
+    </NODE>
+
+    <!-- Outra face da piramide -->
+    <NODE id="facePiramide2">
+        <MATERIAL id="null" />
+        <TEXTURE id="null" />
+
+
+       	<ROTATION axis="z" angle="-70.55" />
+       	<ROTATION axis="y" angle="45" />
+
+        <DESCENDANTS>
+					<LEAF id="triangle1" type="triangle" args="1 0 2 2 0 1 0 0 0" />
+        </DESCENDANTS>
+
+    </NODE>
+
+
+
+     <!-- Postes com rede -->
+    <NODE id="posterede">
+        <MATERIAL id="defaultMaterial" />
+        <TEXTURE id="null" />
+
+        <DESCENDANTS>
+           <NODEREF id="postes" />
+           <NODEREF id="rede" />
+        </DESCENDANTS>
+
+    </NODE>
+
+
+       <!-- Postes -->
+     <NODE id="postes">
+        <MATERIAL id="posteMaterial" />
+        <TEXTURE id="null" />
+
+        <DESCENDANTS>
+            <NODEREF id="poste1" />
+            <NODEREF id="poste2" />
+        </DESCENDANTS>
+
+    </NODE>
+
+      <!-- Poste1 -->
+     <NODE id="poste1">
+        <MATERIAL id="null" />
+        <TEXTURE id="null" />
+
+        <TRANSLATION x="9" y="0" z="0" />
+
+
+        <DESCENDANTS>
+            <NODEREF id="poste" />
+        </DESCENDANTS>
+
+    </NODE>
+
+       <!-- Poste2 -->
+    <NODE id="poste2">
+        <MATERIAL id="null" />
+        <TEXTURE id="null" />
+
+        <TRANSLATION x="9" y="0" z="9" />
+
+        <DESCENDANTS>
+            <NODEREF id="poste" />
+        </DESCENDANTS>
+
+    </NODE>
+
+     <!-- Poste da rede-->
+    <NODE id="poste">
+        <MATERIAL id="null" />
+        <TEXTURE id="null" />
+
+       <SCALE sx="0.5" sy="1" sz="0.5" />
+       <ROTATION axis="x" angle="-90" />
+
+
+        <DESCENDANTS>
+                    <LEAF id="cylinder1" type="cylinder" args="4 0.5 0.5 20 20 1 1" />
+        </DESCENDANTS>
+
+    </NODE>
+
+     <!-- Rede -->
+   <NODE id="rede">
+        <MATERIAL id="null" />
+        <TEXTURE id="net" />
+
+        <DESCENDANTS>
+            <NODEREF id="rede1" />
+            <NODEREF id="rede2" />
+        </DESCENDANTS>
+
+     </NODE>
+
+     <!-- Rede1 -->
+   <NODE id="rede1">
+        <MATERIAL id="null" />
+        <TEXTURE id="null" />
+
+
+        <TRANSLATION x="9" y="2" z="0" />
+        <ROTATION axis="y" angle="90" />
+        <ROTATION axis="z" angle="90" />
+
+        <DESCENDANTS>
+            <LEAF  type="rectangle" args="0 9 2 0" />
+        </DESCENDANTS>
+
+    </NODE>
+
+          <!-- Rede2 -->
+       <NODE id="rede2">
+        <MATERIAL id="null" />
+        <TEXTURE id="null" />
+
+
+        <TRANSLATION x="9" y="2" z="9" />
+        <ROTATION axis="y" angle="270" />
+        <ROTATION axis="z" angle="90" />
+
+
+        <DESCENDANTS>
+            <LEAF  type="rectangle" args="0 9 2 0" />
+        </DESCENDANTS>
+
+    </NODE>
+
+     <!-- Linhas de campo -->
+     <NODE id="linhas">
+        <MATERIAL id="defaultMaterial" />
+        <TEXTURE id="linha" />
+
+
+        <DESCENDANTS>
+            <NODEREF id="linha1" />
+            <NODEREF id="linha2" />
+            <NODEREF id="linha3" />
+            <NODEREF id="linha4" />
+        </DESCENDANTS>
+
+    </NODE>
+
+     <!-- Linha1 -->
+    <NODE id="linha1">
+        <MATERIAL id="null" />
+        <TEXTURE id="null" />
+
+
+        <TRANSLATION x="18" y="0.1" z="9" />
+        <ROTATION axis="x" angle="-90" />
+
+        <DESCENDANTS>
+            <NODEREF id="linhacomprimento" />
+        </DESCENDANTS>
+
+    </NODE>
+
+
+      <!-- Linha2 -->
+    <NODE id="linha2">
+        <MATERIAL id="null" />
+        <TEXTURE id="null" />
+
+
+       <TRANSLATION x="-0.1" y="0.1" z="9" />
+       <ROTATION axis="x" angle="-90" />
+
+         <DESCENDANTS>
+            <NODEREF id="linhacomprimento" />
+        </DESCENDANTS>
+
+    </NODE>
+
+
+        <!-- Linha3 -->
+     <NODE id="linha3">
+        <MATERIAL id="null" />
+        <TEXTURE id="null" />
+
+
+       <TRANSLATION x="18" y="0.1" z="0.106" />
+       <ROTATION axis="y" angle="90" />
+       <ROTATION axis="x" angle="-90" />
+
+         <DESCENDANTS>
+            <NODEREF id="linhalargura" />
+        </DESCENDANTS>
+
+    </NODE>
+
+
+        <!-- Linha4  -->
+      <NODE id="linha4">
+        <MATERIAL id="null" />
+        <TEXTURE id="null" />
+
+
+       <TRANSLATION x="18" y="0.1" z="9.106" />
+       <ROTATION axis="y" angle="90" />
+       <ROTATION axis="x" angle="-90" />
+
+         <DESCENDANTS>
+            <NODEREF id="linhalargura" />
+        </DESCENDANTS>
+
+    </NODE>
+
+        <!-- Linha Comprimento -->
+    <NODE id="linhacomprimento">
+        <MATERIAL id="null" />
+        <TEXTURE id="null" />
+
+
+         <DESCENDANTS>
+            <LEAF  type="rectangle" args="0 9 0.212 0" />
+        </DESCENDANTS>
+
+    </NODE>
+
+        <!-- Linha Largura-->
+    <NODE id="linhalargura">
+        <MATERIAL id="null" />
+        <TEXTURE id="null" />
+
+
+         <DESCENDANTS>
+            <LEAF  type="rectangle" args="0 18 0.212 0" />
+        </DESCENDANTS>
+
+    </NODE>
+
+    <!-- Poste com bandeira-->
+    <NODE id="flagposte" selectable="true">
+
+        <MATERIAL id="defaultMaterial" />
+        <TEXTURE id="null" />
+
+        <TRANSLATION x="5" y="0" z="20" />
+
+
+        <DESCENDANTS>
+            <NODEREF id="postedabandeira" />
+            <NODEREF id="flag" />
+        </DESCENDANTS>
+
+    </NODE>
+
+     <!-- Poste da bandeira-->
+     <NODE id="postedabandeira">
+        <MATERIAL id="posteMaterial" />
+        <TEXTURE id="null" />
+
+       <SCALE sx="0.3" sy="2" sz="0.3" />
+       <ROTATION axis="x" angle="-90" />
+
+
+        <DESCENDANTS>
+                    <LEAF id="cylinder1" type="cylinder" args="4 0.5 0.5 20 20 1 1" />
+        </DESCENDANTS>
+
+    </NODE>
+
+       <!-- bandeira-->
+    <NODE id="flag">
+
+        <MATERIAL id="null" />
+        <TEXTURE id="bandeira" />
+
+        <SCALE sx="1" sy="2" sz="1" />
+        <TRANSLATION x="1" y="3.5" z="0" />
+		<ROTATION axis="x" angle="180" />
+
+        <DESCENDANTS>
+            <NODEREF id="flagside1" />
+            <NODEREF id="flagside2" />
+        </DESCENDANTS>
+
+    </NODE>
+
+
+      <!-- lado bandeira 1-->
+    <NODE id= "flagside1">
+        <MATERIAL id="null" />
+        <TEXTURE id="null" />
+
+        <DESCENDANTS>
+            <LEAF id="patch" type="patch" args="5 5" >
+                 <CPLINE>
+                     <CPOINT xx="-0.9" yy="-0.4" zz="0" ww="1" />
+                     <CPOINT xx="-0.9" yy="0.4" zz="0" ww="1" />
+                  </CPLINE>
+
+                  <CPLINE>
+                    <CPOINT xx="0" yy="-0.4" zz="2.0" ww="1" />
+                    <CPOINT xx="0" yy="0.4" zz="2.0" ww="1" />
+                  </CPLINE>
+
+                  <CPLINE>
+                    <CPOINT xx="0.9" yy="-0.4" zz="0" ww="1" />
+                    <CPOINT xx="0.9" yy="0.4" zz="0" ww="1" />
+                  </CPLINE>
+
+                  <CPLINE>
+                    <CPOINT xx="1.8" yy="-0.4" zz="2.0" ww="1" />
+                    <CPOINT xx="1.8" yy="0.4" zz="2.0" ww="1" />
+                  </CPLINE>
+         </LEAF>
+
+      </DESCENDANTS>
+
+      <!-- lado da bandeira 2-->
+    </NODE>
+
+        <NODE id= "flagside2">
+        <MATERIAL id="null" />
+        <TEXTURE id="null" />
+        <TRANSLATION x="1" y="0" z="2" />
+        <ROTATION axis="z" angle="180" />
+        <ROTATION axis="x" angle="180" />
+
+
+
+        <DESCENDANTS>
+             <LEAF id="patch" type="patch" args="5 5" >
+                <CPLINE>
+                    <CPOINT xx="-0.9" yy="-0.4" zz="0" ww="1" />
+                    <CPOINT xx="-0.9" yy="0.4" zz="0" ww="1" />
+                </CPLINE>
+
+                <CPLINE>
+                    <CPOINT xx="0" yy="-0.4" zz="2.0" ww="1" />
+                    <CPOINT xx="0" yy="0.4" zz="2.0" ww="1" />
+                 </CPLINE>
+
+                  <CPLINE>
+                    <CPOINT xx="0.9" yy="-0.4" zz="0" ww="1" />
+                    <CPOINT xx="0.9" yy="0.4" zz="0" ww="1" />
+                  </CPLINE>
+
+                  <CPLINE>
+                    <CPOINT xx="1.8" yy="-0.4" zz="2.0" ww="1" />
+                    <CPOINT xx="1.8" yy="0.4" zz="2.0" ww="1" />
+                  </CPLINE>
+        </LEAF>
+
+        </DESCENDANTS>
+    </NODE>
+
+
+
+
+
+
+
+
+
+
+    <NODE id="papagaio">
+        <MATERIAL id="defaultMaterial" />
+        <TEXTURE id="null" />
+
+
+        <TRANSLATION x="20" y="01.3" z="30" />
+        <ROTATION axis="x" angle="-15" />
+
+        <ANIMATIONREFS>
+              <ANIMATIONREF id="papagaiomexe" />
+          </ANIMATIONREFS>
+
+        <DESCENDANTS>
+            <NODEREF id="tri11" />
+            <NODEREF id="tri12" />
+            <NODEREF id="tri21" />
+            <NODEREF id="tri22" />
+            <NODEREF id="tri31" />
+            <NODEREF id="tri32" />
+            <NODEREF id="tri41" />
+            <NODEREF id="tri42" />
+            <NODEREF id="cauda11" />
+            <NODEREF id="cauda12" />
+
+
+
+        </DESCENDANTS>
+
+    </NODE>
+
+    <NODE id="tri11">
+         <MATERIAL id="null" />
+         <TEXTURE id="linha" />
+
+
+         <DESCENDANTS>
+ 					     <LEAF id="tria11" type="triangle" args="0 0 2 0 0 0 -2 0 0" />
+         </DESCENDANTS>
+
+     </NODE>
+
+     <NODE id="tri12">
+          <MATERIAL id="null" />
+          <TEXTURE id="linha" />
+
+
+          <DESCENDANTS>
+                 <LEAF id="tria12" type="triangle" args="0 0 2 -2 0 0 0 0 0" />
+          </DESCENDANTS>
+
+      </NODE>
+
+     <NODE id="tri21">
+          <MATERIAL id="null" />
+          <TEXTURE id="pinkkite" />
+
+
+          <DESCENDANTS>
+  					     <LEAF id="tria21" type="triangle" args="0 0 2 0 0 0 4 0 0" />
+          </DESCENDANTS>
+
+      </NODE>
+
+      <NODE id="tri22">
+           <MATERIAL id="null" />
+           <TEXTURE id="pinkkite" />
+
+
+           <DESCENDANTS>
+   					     <LEAF id="tria22" type="triangle" args="0 0 2 4 0 0 0 0 0" />
+           </DESCENDANTS>
+
+       </NODE>
+
+       <NODE id="tri31">
+            <MATERIAL id="null" />
+            <TEXTURE id="pinkkite" />
+
+
+            <DESCENDANTS>
+    					     <LEAF id="tria31" type="triangle" args="0 0 -2 0 0 0 -2 0 0" />
+            </DESCENDANTS>
+
+        </NODE>
+
+        <NODE id="tri32">
+             <MATERIAL id="null" />
+             <TEXTURE id="pinkkite" />
+
+
+             <DESCENDANTS>
+     					     <LEAF id="tria32" type="triangle" args="0 0 -2 -2 0 0 0 0 0" />
+             </DESCENDANTS>
+
+         </NODE>
+
+         <NODE id="tri41">
+              <MATERIAL id="null" />
+              <TEXTURE id="linha" />
+
+
+              <DESCENDANTS>
+      					     <LEAF id="tria41" type="triangle" args="0 0 -2 4 0 0 0 0 0" />
+              </DESCENDANTS>
+
+          </NODE>
+
+          <NODE id="tri42">
+               <MATERIAL id="null" />
+               <TEXTURE id="linha" />
+
+
+               <DESCENDANTS>
+       					     <LEAF id="tria42" type="triangle" args="0 0 0 4 0 0 0 0 -2" />
+               </DESCENDANTS>
+
+           </NODE>
+
+       <NODE id= "cauda11">
+           <MATERIAL id="null" />
+           <TEXTURE id="toalha" />
+
+           <DESCENDANTS>
+               <LEAF id="patch11" type="patch" args="5 5" >
+                    <CPLINE>
+                        <CPOINT xx="4" yy="0.1" zz="0" ww="1" />
+                        <CPOINT xx="4" yy="-0.1" zz="0" ww="1" />
+                     </CPLINE>
+
+                     <CPLINE>
+                       <CPOINT xx="5" yy="0.1" zz="-2" ww="1" />
+                       <CPOINT xx="5" yy="-0.1" zz="-2" ww="1" />
+                     </CPLINE>
+
+                     <CPLINE>
+                       <CPOINT xx="6" yy="0.1" zz="2" ww="1" />
+                       <CPOINT xx="6" yy="-0.1" zz="2" ww="1" />
+                     </CPLINE>
+
+                     <CPLINE>
+                       <CPOINT xx="8.5" yy="0.1" zz="-2.5" ww="1" />
+                       <CPOINT xx="8.5" yy="-0.1" zz="-2.5" ww="1" />
+                     </CPLINE>
+            </LEAF>
+
+         </DESCENDANTS>
+
+       </NODE>
+
+       <NODE id= "cauda12">
+           <MATERIAL id="null" />
+           <TEXTURE id="toalha" />
+
+           <DESCENDANTS>
+               <LEAF id="patch12" type="patch" args="5 5" >
+                 <CPLINE>
+                     <CPOINT xx="4" yy="-0.1" zz="0" ww="1" />
+                     <CPOINT xx="4" yy="0.1" zz="0" ww="1" />
+                  </CPLINE>
+
+                  <CPLINE>
+                    <CPOINT xx="5" yy="-0.1" zz="-2" ww="1" />
+                    <CPOINT xx="5" yy="0.1" zz="-2" ww="1" />
+                  </CPLINE>
+
+                  <CPLINE>
+                    <CPOINT xx="6" yy="-0.1" zz="2" ww="1" />
+                    <CPOINT xx="6" yy="0.1" zz="2" ww="1" />
+                  </CPLINE>
+
+                  <CPLINE>
+                    <CPOINT xx="8.5" yy="-0.1" zz="-2.5" ww="1" />
+                    <CPOINT xx="8.5" yy="0.1" zz="-2.5" ww="1" />
+                  </CPLINE>
+            </LEAF>
+
+         </DESCENDANTS>
+
+       </NODE>
+
+
+
+
+    <!-- Teste
+        </NODE>
+
+        <NODE id="teste">
+        <MATERIAL id="null" />
+        <TEXTURE id="bola" />
+
+
+        <TRANSLATION x="20" y="15" z="15" />
+        <SCALE sx="5" sy="5" sz="5" />
+
+        <DESCENDANTS>
+                    <LEAF id="triangle1" type="triangle" args="1 0 2 2 0 1 0 0 0" />
+        </DESCENDANTS>
+
+    </NODE>
+
+        -->
+
+</NODES>
+
+
+</SCENE>
